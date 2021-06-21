@@ -1,11 +1,12 @@
-<div class="row">
-  <div class="col-12">
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-xl-8 py-vh-5">
     {% for jobs in collections.jobs | reverse %}
       {% if loop.index0 < 999 %}
-        <div class="mb-5 py-5 border-top">
-          <h2>{{ jobs.data.role}} at {{ jobs.data.company}}</h2>
-          Published: <time datetime="{{ post.date | htmlDateString }}">{{ jobs.date | readableDate }}</time> <br>
-          <p>{{ jobs.data.intro }}</p>
+        <div class="mb-3 py-4 border-top">
+          <h2 class="display-5">{{ jobs.data.roleName }} <small class="text-muted">(f/m/d)</small></h2>
+          <h3 class="h6">at <b>{{ jobs.data.companyName }}</b> in {{ jobs.data.cityName }}, {{ jobs.data.countryName }}</h3>
+          Published: <time datetime="{{ jobs.date | htmlDateString }}">{{ jobs.date | readableDate }}</time> <br>
+          <p>{{ jobs.data.introText }}</p>
           <a href="{{ jobs.url | url }}" class="link-fancy">Read more...</a>
         </div>
       {% endif %}

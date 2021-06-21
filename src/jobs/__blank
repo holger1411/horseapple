@@ -1,30 +1,30 @@
 ---
 ####################### Personal #######################
 githubHandle: holger1411
-#Please add your GitHub username here. Make sure you can receive DM´s. Possible Applicants will be send to your GitHub profile page
+#Please add your GitHub username here. Make sure you have at least one contact possibility available. Could be your Twitter profile with open DM´s, a link to your personal website with a contact form or a working email adress published on your profile.
 
 ####################### Basics #######################
-devType: Frontend
+devType: Backend
 #Please use one or more of the following: Frontend, Backend, Full Stack, Dev Ops, UI, Data
 
-roleName: UX Engineer
+roleName: Java Developer
 #Describe the role in a few words. Like "Java Developer", "React Frontend Developer" or "UX Engineer"
 
-techStack: HTML, CSS, SCSS, Bootstrap, Git
+techStack: Java, Spring
 #Add the typical tech stack to work with
 
-introText: Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+intro: Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 #Write a short personal intro. For example "We sreaching a talented Go developer for our new formed product team working on a secret new feature."
 
 ####################### Company Informations #######################
-companyName: Umbrella Corp.
+companyName: OCP GmbH
 #Add your company name
 
-companySize: 5000
+companySize: 100-500
 #Add the number of people working for your company
 
 ####################### Location #######################
-cityName: Bissendorf
+cityName: Burgwedel
 #Add the nearest by city where the job is offered. If it is not in a city add something like "Hannover region"
 
 stateName: Lower Saxony
@@ -34,7 +34,7 @@ countryName: germany
 #Add country
 
 ####################### Optionals #######################
-salaryRange: 150k - 200k
+salaryRange: 20k -50k
 #Add some salary information. Can be something like "from 50-70k", "above average" or you can keep it empty. In this case no salary infomrations will be published
 
 ####################### DON´T EDIT! #######################

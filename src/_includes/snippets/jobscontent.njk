@@ -1,18 +1,22 @@
-<div class="row">
-  <div class="col-12">
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-xl-8 py-vh-5">
     <header>
-      <h1>{{ role }}
-        at
-        {{ company }}</h1>
+      <h1>{{ roleName }} <small class="text-muted">(f/m/d)</small></h1>
+      <h2 class="h5"><small>at</small> <b>{{ companyName }}</b></h2>
       <div class="bg-light p-3 border">
+
+        {% if salaryRange %}
         Gehalt:
-          {{ salary }}
+          {{ salaryRange }}
           €</br>
+   {% endif %}
+
           Location:
-            {{ location }}
+            {{ cityName }}, {{ stateName }}, {{ countryName }}
             </br>
       </div>
     </header>
     {{ content | safe }}
+    <a class="btn btn-primary btn-lg" a href="https://github.com/{{ githubHandle }}">Contact me via Github</a>
   </div>
 </div>
