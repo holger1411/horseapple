@@ -2,7 +2,7 @@
   <div class="col-12">
     {% for jobs in collections.jobs | reverse %}
       {% if loop.index0 < 999 %}
-        <div class="mb-5 pb-5 border-bottom">
+        <div class="mb-5 pb-5 border-top">
           <h2>{{ jobs.data.role}} at {{ jobs.data.company}}</h2>
           Published: <time datetime="{{ post.date | htmlDateString }}">{{ jobs.date | readableDate }}</time> <br>
           <p>{{ jobs.data.intro }}</p>
