@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <header>
+      <h1>{{ role }}
+        at
+        {{ company }}</h1>
+      <div class="bg-light p-3 border">
+        Gehalt:
+          {{ salary }}
+          €</br>
+          Location:
+            {{ location }}
+            </br>
+      </div>
+    </header>
+    {{ content | safe }}
+  </div>
+</div>

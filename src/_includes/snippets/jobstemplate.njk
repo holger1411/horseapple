@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12">
+    <article>
+      <header>
+        <h1>{{ jobs.data.role }}</h1>
+          <p>Published
+            <time datetime="{{ page.date | htmlDateString }}">{{ jobs.date | readableDate }}</time>
+          </p>
+        {% endblock %}
+      </header>
+      <p class="lead">
+        {{ intro }}
+      </p>
+      {{ content | safe }}
+    </article>
+  </div>
+</div>

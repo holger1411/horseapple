@@ -1,0 +1,4 @@
+{
+    "layout": "layouts/jobs.njk",
+    "tags": ["jobs"]
+}
