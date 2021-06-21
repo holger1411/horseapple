@@ -1,7 +1,7 @@
 ---
 role: Java Developer
 date: Created
-company: Rossmann GmbH
+company: OCP GmbH
 salary: 20k -50k
 location: Burgwedel, Germany
 intro: Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
