@@ -10,9 +10,30 @@
     {% include 'snippets/navbar.njk' %}
 
     <main>
-      <div class="container py-5">
-        {% include 'snippets/jobsloop.njk' %}
+      <div class="wrapper position-relative">
+        <div class="col-12 col-xl-6 position-absolute top-0 start-0 h-100 bg-light">
+</div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-12 col-xl-8 py-5 pe-5 bg-light">
+          {% include 'snippets/jobsloop.njk' %}
+          </div>
+          <div class="col-12 col-xl-4 mt-5 bg-white ">
+            <div class="ps-lg-5">
+  <h1>Find latest job recommendations</h1>
+  <p class="lead">Find the latest developer jobs recomended by internal employees from tech company´s and startup´s from within Hannover region and lower saxony, germany.</p>
+<hr/>
+<div class="bg-light p-5 mt-4">
+  <h2>Recommend a job?</h2>
+  <p>You are a developer and want to recommend a job in your company or even in your team? Open up a pull request (aka merge request)!</p>
+    <a class="btn btn-dark btn-lg px-5 py-3" a href="#">Submit a Job</a>
+  </div>
+</div>
+          </div>
+
       </div>
+      </div>
+    </div>
     </main>
 
     <footer class="container">
