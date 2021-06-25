@@ -1,22 +1,73 @@
-<div class="row d-flex justify-content-center">
-  <div class="col-12 col-xl-8 py-vh-5">
+
     <header>
       <h1>{{ roleName }} <small class="text-muted">(f/m/d)</small></h1>
-      <h2 class="h5"><small>at</small> <b>{{ companyName }}</b></h2>
-      <div class="bg-light p-3 border">
-
-        {% if salaryRange %}
-        Gehalt:
+      <h2 class="h5"><small>at</small> <b>{{ companyName }}</b>, {{roleLocation}},   {% if salaryRange %}
+        Salary:
           {{ salaryRange }}
           €</br>
-   {% endif %}
+   {% endif %}</h2>
 
-          Location:
-            {{ cityName }}, {{ stateName }}, {{ countryName }}
-            </br>
-      </div>
     </header>
-    {{ content | safe }}
+
+    <div class="row border-top mt-4 py-4">
+      <div class="col-4"><h3>About the role</h3></div>
+      <div class="col-4">
+        <ul>
+          <li>
+            Type: {{roleType}}
+          </li>
+          <li>
+            Must Have Tech Stack: {{roleMustHaveTechStack}}
+          </li>
+          <li>
+            Could Have Tech Stack: {{roleCouldHaveTechStack}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>
+            Tooling: {{roleTooling}}
+          </li>
+          <li>
+            Experience: {{roleExperience}}
+          </li>
+          <li>
+            Location: {{roleLocation}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row border-top mt-4 py-4">
+      <div class="col-4"><h3>About the company</h3></div>
+      <div class="col-4">
+        <ul>
+          <li>
+            Company Name: {{companyName}}
+          </li>
+          <li>
+            Size: {{companySize}}
+          </li>
+          <li>
+            Team Size: {{companyTeamSize}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>
+            Team Structure: {{companyTeamStructure}}
+          </li>
+          <li>
+            Website: {{companyWebsite}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <p class="lead">
+    {{ content | safe | replace("<p>", "") }}
+    </p>
     <a class="btn btn-dark btn-lg" a href="https://github.com/{{ githubHandle }}">Contact me via Github</a>
-  </div>
-</div>

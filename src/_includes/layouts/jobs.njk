@@ -1,23 +1,33 @@
 <!doctype html>
 <html class="h-100" lang="{{ metadata.language }}">
-
   <head>
     {% include 'snippets/head.njk' %}
   </head>
-
   <body>
-
     {% include 'snippets/navbar.njk' %}
-
-    <main class="container">
-      {% include 'snippets/jobscontent.njk' %}
-    </main>
-
+    <div class="wrapper position-relative">
+      <div class="col-12 col-xl-6 position-absolute top-0 start-0 h-100 bg-light">
+      </div>
+      <main class="container position-relative">
+        <div class="row">
+          <div class="col-12 col-xl-8 py-5 pe-5 bg-light">
+            <div class="col-xl-11">
+        {% include 'snippets/jobscontent.njk' %}
+      </div>
+      </div>
+                <div class="col-12 col-xl-4 text-center">
+                  <div class="col p-lg-5">
+                    <h3>This job is recomemended by:</h3>
+        {% githubProfile githubHandle %}
+        </div>
+      </div>
+                </div>
+    </div>
+      </main>
+    </div>
 
     <footer class="container">
       {% include 'snippets/footer.njk' %}
     </footer>
-
   </body>
-
 </html>
