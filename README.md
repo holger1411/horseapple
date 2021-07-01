@@ -1,3 +1,3 @@
 # A job reference platform - From developers for developers - based on Github
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/64b42b0c-aeba-4583-b023-202fcdf571bb/deploy-status)](https://app.netlify.com/sites/11straps-demo/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/406bfd1b-67a1-404c-8485-000bc186fa55/deploy-status)](https://app.netlify.com/sites/mergerequestdev/deploys)
