@@ -10,17 +10,30 @@ roleName: UX Engineer #MANDATORY#
 roleType: Frontend #MANDATORY#
 #Please use "Backend" or "Frontend". Use "Backend" even if it is more a DevOps or DS related role, and "Frontend" even if it is something like "UI Developer" or "UX Engineer"
 
-roleMustHaveTechStack: HTML, CSS, SCSS, JS #MANDATORY#
+roleUrl: https://api.chucknorris.io/ #OPTIONAL#
+#Is there a public job posting on your company website or another job portal like indeed or glassdoor? Add the URL here to spice up your recommendation with some "official" informations.
+
+roleMustHaveTechStack:
+  - HTML
+  - CSS
+  - SCSS
+  - JS #MANDATORY#
 #Add the must have tech stack. Things a applicant must know before starting to work for your team
 
 roleIntro: Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 #Write a short personal intro about the open position. For example "We sreaching a talented Go developer for our new formed product team working on a secret new feature." Or you explain in two sentences why Start Trek is better than Star Wars...
 
-roleCouldHaveTechStack: Github, React
+roleCouldHaveTechStack:
+  - Github
+  - React
 #Add a more broader and extended tech stack. Everything you work with on a daily basis but could be learnd by new applicants "on the job"
 
 roleTooling: Slack, Jira, Confluence, Miro, VS Code
 #Add a array of tools you working with daily. Just that applicants get a sense of your teams tooling setup
+
+roleHardware: PC or Mac, Monitor of choice
+#Add some infos about the hardware policies. "Free of choice", "PC or Mac", "PC only", "3k budget" etc. You might also include infos for desks, chairs etc.
+
 
 roleExperience: 2yrs minimum
 #Add the needed experience in some way. Can be something like "Senior", or "more than 5yrs" etc.
@@ -29,7 +42,7 @@ roleLocation: fully remote
 #Add where the applicant will work. Can be a city or town if it is a "in-office" role, could also be "remote but Europe", or "fully remote" or "three days per week WFH, two days in-office" etc.
 
 ####################### Company and Team Informations #######################
-companyName: OCP GmbH #MANDATORY#
+companyName: Skynet LLC #MANDATORY#
 #Add your company name
 
 companySize: 100-500
@@ -45,11 +58,13 @@ companyWebsite: https://cyberdynesystems.com
 #Add your company´s website URL
 
 ####################### Benefits #######################
-benefits: Free lunch, Free beer on fridays
+benefits:
+  - Free lunch
+  - Free beer on fridays
 #Add an array of benefits you and/or your team have
 
 ####################### Optionals #######################
-salaryRange: 20k -50k
+salaryRange: 60k -80k
 #Add some salary information. Can be something like "from 50-70k", "above average" or you can keep it empty. In this case no salary infomrations will be published
 
 ####################### DON´T EDIT! #######################

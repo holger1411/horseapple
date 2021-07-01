@@ -10,6 +10,9 @@ roleName: Java Developer #MANDATORY#
 roleType: Backend #MANDATORY#
 #Please use "Backend" or "Frontend". Use "Backend" even if it is more a DevOps or DS related role, and "Frontend" even if it is something like "UI Developer" or "UX Engineer"
 
+roleUrl: https://api.chucknorris.io/ #OPTIONAL#
+#Is there a public job posting on your company website or another job portal like indeed or glassdoor? Add the URL here to spice up your recommendation with some "official" informations.
+
 roleMustHaveTechStack: Java, Spring, Git #MANDATORY#
 #Add the must have tech stack. Things a applicant must know before starting to work for your team
 
@@ -22,10 +25,14 @@ roleCouldHaveTechStack: Github, Maeven
 roleTooling: Slack, Jira, Confluence, Miro, VS Code
 #Add a array of tools you working with daily. Just that applicants get a sense of your teams tooling setup
 
+roleHardware: PC or Mac, Monitor of choice
+#Add some infos about the hardware policies. "Free of choice", "PC or Mac", "PC only", "3k budget" etc. You might also include infos for desks, chairs etc.
+
+
 roleExperience: 2yrs minimum
 #Add the needed experience in some way. Can be something like "Senior", or "more than 5yrs" etc.
 
-roleLocation: fully remote
+roleLocation: Hannover
 #Add where the applicant will work. Can be a city or town if it is a "in-office" role, could also be "remote but Europe", or "fully remote" or "three days per week WFH, two days in-office" etc.
 
 ####################### Company and Team Informations #######################
@@ -45,11 +52,13 @@ companyWebsite: https://cyberdynesystems.com
 #Add your company´s website URL
 
 ####################### Benefits #######################
-benefits: Free lunch, Free beer on fridays
+benefits:
+  - Free lunch
+  - Free beer on fridays
 #Add an array of benefits you and/or your team have
 
 ####################### Optionals #######################
-salaryRange: 20k -50k
+salaryRange: 50k - 70k
 #Add some salary information. Can be something like "from 50-70k", "above average" or you can keep it empty. In this case no salary infomrations will be published
 
 ####################### DON´T EDIT! #######################

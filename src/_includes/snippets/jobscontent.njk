@@ -1,73 +1,109 @@
+<header>
+  <h1 class="display-4">{{ roleName }}
+    <small class="text-muted">(f/m/d)</small>
+  </h1>
+  <h2 class="h6">
+    <small>bei:</small>
+    <b>{{ companyName }}</b>,
+    {{roleLocation}},
+    {% if salaryRange %}
+      geschätztes Gehalt: {{ salaryRange }}€,
+  {% endif %}
+  {% if roleExperience %}
+    Erfahrungsstufe: <b>{{roleExperience}}</b></br>
+{% endif %}
+</h2>
+{% if roleUrl %}
+  <p class="lead">
+    <a href="{{roleUrl}}" target="_blank" class="link-fancy">Offizielle Stellenbeschreibung</a>
+  </p>
+{% endif %}
+</header>
 
-    <header>
-      <h1>{{ roleName }} <small class="text-muted">(f/m/d)</small></h1>
-      <h2 class="h5"><small>at</small> <b>{{ companyName }}</b>, {{roleLocation}},   {% if salaryRange %}
-        Salary:
-          {{ salaryRange }}
-          €</br>
-   {% endif %}</h2>
+<div class="row border-top mt-4 py-4">
+<div class="col-4">
+  <h3>Tech Stack</h3>
+</div>
+<div class="col-4">
+  {% if roleMustHaveTechStack %}
+      <h6>Primär:</h6>
+      {{ roleMustHaveTechStack }}
+      {% endif %}
 
-    </header>
+</div>
 
-    <div class="row border-top mt-4 py-4">
-      <div class="col-4"><h3>About the role</h3></div>
-      <div class="col-4">
-        <ul>
-          <li>
-            Type: {{roleType}}
-          </li>
-          <li>
-            Must Have Tech Stack: {{roleMustHaveTechStack}}
-          </li>
-          <li>
-            Could Have Tech Stack: {{roleCouldHaveTechStack}}
-          </li>
-        </ul>
-      </div>
-      <div class="col-4">
-        <ul>
-          <li>
-            Tooling: {{roleTooling}}
-          </li>
-          <li>
-            Experience: {{roleExperience}}
-          </li>
-          <li>
-            Location: {{roleLocation}}
-          </li>
-        </ul>
-      </div>
-    </div>
+<div class="col-4">
+    {% if roleCouldHaveTechStack %}
+        <h6>Sekundär:</h6>
+        {{ roleCouldHaveTechStack }}
 
-    <div class="row border-top mt-4 py-4">
-      <div class="col-4"><h3>About the company</h3></div>
-      <div class="col-4">
-        <ul>
-          <li>
-            Company Name: {{companyName}}
-          </li>
-          <li>
-            Size: {{companySize}}
-          </li>
-          <li>
-            Team Size: {{companyTeamSize}}
-          </li>
-        </ul>
-      </div>
-      <div class="col-4">
-        <ul>
-          <li>
-            Team Structure: {{companyTeamStructure}}
-          </li>
-          <li>
-            Website: {{companyWebsite}}
-          </li>
-        </ul>
-      </div>
-    </div>
+  {% endif %}
+
+</div>
+
+</div>
+
+<div class="row border-top mt-4 py-4">
+<div class="col-4">
+  <h3>Weitere Informationen</h3>
+</div>
+<div class="col-4">
 
 
-    <p class="lead">
-    {{ content | safe | replace("<p>", "") }}
-    </p>
-    <a class="btn btn-dark btn-lg" a href="https://github.com/{{ githubHandle }}">Contact me via Github</a>
+    {% if companySize %}
+
+        <h6>Firmengröße:</h6>
+        {{companySize}}
+
+    {% endif %}
+
+    {% if companyTeamSize %}
+<hr/>
+        <h6>Team Größe:</h6>
+        {{companyTeamSize}}
+
+    {% endif %}
+    {% if companyRevenue %}
+<hr/>
+        <h6>Unternehmensumsatz pro Jahr:</h6>
+        {{companyRevenue}}
+
+    {% endif %}
+
+
+
+</div>
+<div class="col-4">
+
+    {% if roleTooling %}
+        <h6>Tooling:</h6>
+        {{roleTooling}}
+
+        {% endif %}
+    {% if roleHardware %}
+<hr/>
+        <h6>Hardware:</h6>
+        {{roleHardware}}
+
+    {% endif %}
+
+</div>
+</div>
+
+<div class="row border-top mt-4 py-4">
+<div class="col-4">
+  <h3>Mitarbeitervorteile</h3>
+</div>
+<div class="col-8">
+  <ul>
+    {% for item in benefits %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+{% if content %}
+<p class="lead">
+  {{ content | safe | replace("<p>", "") }}
+</p>
+{% endif %}

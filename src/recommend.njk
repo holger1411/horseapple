@@ -1,38 +1,54 @@
 ---
 layout: layouts/default.njk
-title: How to recommend a job?
+title: Wie empfehle ich einen Job?
 ---
+<div class="bg-light p-5">
+<h3>Tl;dr</h3>
+<ul>
+<li>Forke dieses <a href="https://github.com/holger1411/mergerequest.dev" target="_blank">Gitbub Repo</a> hier.</li>
+<li>Lege im Ordner <code>/src/jobs</code> eine neue Datei mit der Dateiendung <code>.md</code> an. Nutze als Vorlage für den Inhalt <a href="https://github.com/holger1411/mergerequest.dev/blob/main/src/jobs/__blank" target="_blank">diese Datei</a>. Einfach copy&paste.</li>
+<li>Befülle alle mit "Mandatory" gekennzeichneten Werte. Alles andere ist optional.</li>
+<li>Committe deine Änderungen. Erstelle jetzt ein Pull Request in den "Main" Branch des Ausgangsrepos von deinem Fork aus.</li>
+<li>Jetzt heißt es abwarten und Tee trinken.</li>
+<li>Ist alles soweit okay merge ich deine Änderungen und deine Job- Empfehlung geht online.</li>
+<li>Sollte etwas fehlen, nicht stimmen etc. kommentiere ich dein PR entsprechend.</li>
+</ul>
+</div>
 <div class="py-vh-4">
-  <h2>Step 1: Fork and checkout the mergerequest.dev repo</h2>
+  <h2>Schritt 1: Fork das mergerequest.dev repo</h2>
   <p class="lead">
-    mergerequest.de is open source and lives on Github.com. Go to <a href="https://github.com/holger1411/mergerequest.dev" target="_blank">this repo</a> and fork it. To do that hit the small "fork" button in the upper right corner. Now check it out on your local computer.
+    mergerequest.dev ist ein Open Source Projekt auf Github. Um selber Dateien (und damit auch Job- Empfehlungen) hinzufügen zu können mußt du das Projekt zunächst "forken". Also eine Kopie anlegen. Offne dazu dieses <a href="https://github.com/holger1411/mergerequest.dev" target="_blank">Github Repo</a> und klicke oben rechts in der Ecke auf den "Fork" Button. Jetzt hast du unter deinem eigenen Account eine exakte Kopie diese Projekts angelegt.
   </p>
 </div><hr/>
 
 <div class="py-vh-4">
-  <h2>Step 2: Add your job recommendation in front matter/markdown format and commit changes</h2>
+  <h2>Schritt 2: Lege in deinem eigenen Fork eine Job- Empfehlung an</h2>
   <p class="lead">
-    Create a new .md file within the ./jobs folder. Use this Gist as <a href="https://gist.githubusercontent.com/holger1411/616d757f39ca1f05673b73b902da557f/raw/2fd612a715ae333f6cdfdbb16e766c320da650b5/blank-recommendation-template.md" target="_blank">template</a>. Fill in / replace all mandatory informations. You may also add some optional informations. Make sure you replaced all values with your informations or ....with nothing (< means make sure you removed all the dummy content). Now commit your changes to your fork.
+    Nachdem du ein Fork angelegt hast siehst du jetzt unter deinem Github Account eine Übersicht über deine Kopie. Geh in den Ordner <code>src/jobs</code> und lege eine neue Datei an. Dies kannst du machen indem du oben rechts auf "Add file" klickst. Die Dateiänderung muß <code>.md</code> sein. Den namen kannst du frei wählen, er darf aber nur einmal vorkommen.
+    Kopiere den Inhalt <a href="https://github.com/holger1411/mergerequest.dev/blob/main/src/jobs/__blank" target="_blank">diese Datei</a> in deine neu angelegte Datei. Das ist die Vorlage für eine Job- Empfehlung. Die datei selber besteht aus einer ganzen Reihe Key:Value Paaren. Aber keine Sorge, wirklich verpflichtend sind nur ein paar Angaben oben.
+    <br/>Alles weitere kannst du leer lassen. Committe nun die neue Datei (klick auf den großen grünen "commit new file" Button unten).
   </p>
 </div><hr/>
 
 <div class="py-vh-4">
-  <h2>Step 3: Open up a pull request (aka merge request)</h2>
+  <h2>Schritt 3: Eröffne ein Pull Request (aka Merge Request) deiner Änderungen</h2>
   <p class="lead">
-    Go to your fork on Github. Hit the big green "pullrequest" button and make sure you request a pull into the main branch of mergerequest.dev. Thats it. Now you have to wait a bit till I have time review your pull request. Might be that I have some questions, recommendations or need some clearification. You will also see a preview of your recommendation. Make sure everything looks good. You know the game...
+    Wenn du soweit mit deiner Job- Empfehlung zufrieden bist klicke auf das "Contribute" Dropdown Menü oberhalb von dem dAteiverzeichnis deines Forks. Klick dann auf den großen grünen "Open Pull Request" Button. Dir wird dann ein Vergleich deiner Änderungen in deinem Repo zu dem Ursprungs- Repo angezeigt. Du solltest also auf der linken seite nichts sehen und auf der rechten Seite deine Job- Empfehlung als .md Datei. <br/>
+    Wenn du alles überprüft hast klicke auf den grünen "Create Pull Request" Button. Es werden jetzt einige Tests durchgeführt. Zusätzlich wird auch eine Vorschau- Version der Seite mit deiner Job- Empfehlung erstellt. Dies ist nicht die Live- Seite! Aber du kannst hier deinen Eintrag begutachten und schon überprüfen. Ggf. kannst du Änderungen in deinem Fork vornehmen und einen erneuten Pull Request stellen.
   </p>
 </div><hr/>
 
 <div class="py-vh-4">
-  <h2>Step 4: Tatatata! Party on, Wayne...</h2>
+  <h2>Schritt 4: Deine Job- Empfehlung geht online</h2>
   <p class="lead">
-    Once the request is merged your recommendation is online. If you need to change, add, remove, comment etc. something change your forked file again and open up another pull request.
+    Wenn alle Tests durchlaufen, alle nötigen Infos vorliegen und die Vorschau gut aussieht, werde ich dinen Pull Request in den Main Branch von mergerequest.dev mergen. Je nach Wochentag und Uhrzeit kann das etwas dauern. Bitte bedenke das dies nur ein Open Source Projekt ist das ich neben der Arbeit und der Familie betreue. Ich versuche aber alles innerhalb von weniger als 2 Werktagen zu bearbeiten.<br/>
+    Sobald ein Pull Request in den Main Branch gemerged (...man sind das viele Anglizismen) wurde, geht deine Job- Empfehlung auch wirklich live.
   </p>
 </div><hr/>
 
 <div class="py-vh-4">
-  <h2>Step 5: Hasta la vista....</h2>
+  <h2>Schritt 4: Änderungen? Stelle endlich besetzt? Rechtschreibfehler entdeckt?</h2>
   <p class="lead">
-  If the role isn´t vacant anymore you can delet your recommendation by deleting the file aaaannnnnnd....open another PR. Once merged your recommendation is gone. No fear, it will have an eternal live within the Git heaven...
+    Möchtest du deine Job- Empfehlung offline schalten, oder andere Änderungen an deinem Inhalt vornehmen, tu dies in deinem Fork. Lösche als z.B. deine Datei. Dann eröffne erneut einen Pull Request (Siehe Schritt 3). Auch hier kann es etwas dauern, aber sobald ich dein Request gemerged hab, sind die Änderungen online.
   </p>
 </div><hr/>

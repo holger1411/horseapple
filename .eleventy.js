@@ -1,7 +1,33 @@
-const {
-  DateTime
-} = require("luxon");
+const Cache = require("@11ty/eleventy-cache-assets");
+const { DateTime } = require("luxon");
 const fetch = require("node-fetch");
+
+async function fetchGitHubUser(githubHandle) {
+  console.log(`Fetching GitHub data... ${githubHandle}`);
+  let github = await fetch(`https://api.github.com/users/${githubHandle}`)
+    .then(res => res.json()) // node-fetch option to transform to json
+    .then(json => {
+      return {
+        avatar_url: json.avatar_url,
+        twitter: json.twitter_username,
+        followers: json.followers,
+        name: json.name,
+        company: json.company,
+        blog: json.blog,
+        location: json.location
+      };
+    })
+
+    return `
+      <div class="p-5"><img class="rounded-circle img-fluid" src="${ github.avatar_url }" /></div>
+                          <h3 class="h5">Dieser Job wird empfohlen von:</h3>
+      <h4>${ github.name }</h4>
+      <p class="lead">Aus ${ github.location },<br/> arbeitet bei ${ github.company }</p>
+      <p>Du kannst ihn hier finden: <a href="https://github.com/${ githubHandle }" target="_blank" class="link-fancy">${ githubHandle }</a>.</p>
+    `;
+};
+
+
 
 module.exports = function(eleventyConfig) {
   // Add a filter using the Config API
@@ -33,28 +59,4 @@ module.exports = function(eleventyConfig) {
     }
   };
 
-};
-
-async function fetchGitHubUser(githubHandle) {
-  console.log(`Fetching GitHub data... ${githubHandle}`);
-  const github = await fetch(`https://api.github.com/users/${githubHandle}`)
-    .then(res => res.json()) // node-fetch option to transform to json
-    .then(json => {
-      return {
-        avatar_url: json.avatar_url,
-        twitter: json.twitter_username,
-        followers: json.followers,
-        name: json.name,
-        company: json.company,
-        blog: json.blog,
-        location: json.location
-      };
-    });
-
-    return `
-      <div class="p-5"><img class="rounded-circle img-fluid" src="${ github.avatar_url }" /></div>
-      <h4>${ github.name }</h4>
-      <p class="lead">From ${ github.location }<br/> working at ${ github.company }</p>
-      <p>You can find me on GitHub here: <a href="https://github.com/${ githubHandle }" target="_blank">${ githubHandle }</a>.</p>
-    `;
 };

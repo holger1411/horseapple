@@ -1,12 +1,11 @@
-
-    {% for jobs in collections.jobs | reverse %}
+  {% for jobs in collections.jobs | reverse %}
       {% if loop.index0 < 999 %}
         <div class="py-vh-2 border-bottom border-white">
           <h2 class="display-5">{{ jobs.data.roleName }} <small class="text-muted">(f/m/d)</small></h2>
-          <h3 class="h6">at <b>{{ jobs.data.companyName }}</b> in {{ jobs.data.roleLocation }}</h3>
-          Published: <time datetime="{{ jobs.date | htmlDateString }}">{{ jobs.date | readableDate }}</time> <br>
-          <p>{{ jobs.data.roleIntrot }}</p>
-          <a href="{{ jobs.url | url }}" class="link-fancy">Read more...</a>
+          <h3 class="h6">bei: <b>{{ jobs.data.companyName }}</b> in {% include 'icons/geo-alt.njk' %}{{ jobs.data.roleLocation }}</h3>
+          Veröffentlicht: <time datetime="{{ jobs.date | htmlDateString }}">{{ jobs.date | readableDate }}</time> <br>
+          <p>{{ jobs.data.roleIntro }}</p>
+          <a href="{{ jobs.url | url }}" class="link-fancy">Weiterlesen...</a>
         </div>
       {% endif %}
     {% endfor %}
