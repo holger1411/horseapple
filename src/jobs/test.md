@@ -45,7 +45,9 @@ companyWebsite: https://cyberdynesystems.com
 #Add your company´s website URL
 
 ####################### Benefits #######################
-benefits: Free lunch, Free beer on fridays
+benefits:
+  - Free lunch
+  - Free beer on fridays
 #Add an array of benefits you and/or your team have
 
 ####################### Optionals #######################

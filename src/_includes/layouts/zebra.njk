@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="h-100" lang="{{ metadata.language }}">
+
+  <head>
+    {% include 'snippets/head.njk' %}
+  </head>
+
+  <body>
+
+    {% include 'snippets/navbar.njk' %}
+
+    <main>
+      <div class="wrapper position-relative py-vh-5">
+        <div class="col-12 col-xl-6 position-absolute top-0 start-0 h-100 bg-light"></div>
+        <div class="container position-relative">
+            {{ content | safe }}
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      {% include 'snippets/footer.njk' %}
+    </footer>
+
+  </body>
+
+</html>

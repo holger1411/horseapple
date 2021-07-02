@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="h-100" lang="{{ metadata.language }}">
-
   <head>
     {% include 'snippets/head.njk' %}
   </head>
@@ -8,32 +7,31 @@
   <body>
 
     {% include 'snippets/navbar.njk' %}
-
     <main>
       <div class="wrapper position-relative">
-        <div class="col-12 col-xl-6 position-absolute top-0 start-0 h-100 bg-light">
-</div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-12 col-xl-8 py-5 pe-5 bg-light">
-          {% include 'snippets/jobsloop.njk' %}
+        <div class="col-12 col-xl-6 position-absolute top-0 start-0 h-100 bg-light"></div>
+        <div class="container position-relative">
+          <div class="row">
+            <div class="col-12 col-xl-8 py-5 pe-5 bg-light">
+              {% include 'snippets/jobsloop.njk' %}
+            </div>
+            <div class="col-12 col-xl-4 mt-5 bg-white ">
+              <div class="ps-lg-5">
+                <h1>Job- Empfehlungen von Entwicklern</h1>
+                <p class="lead">Auf mergerequest.dev findest du Job- Empfehlungen direkt von Entwicklern aus den Unternehmen die dich suchen. Du kannst Kontakt mit ihnen aufnehmen und die für dich wichtigsten Fragen klären. Ganz ohne HR und Headhunter blablabla.<br/>
+                  <b>Erstmal begrenzt auf die Region Hannover in Niedersachsen.</b>
+                </p>
+                <hr/>
+                <div class="bg-light p-5 mt-4">
+                  <h2>Du willst selber ein Job empfehlen?</h2>
+                  <p>Du bist Entwickler und suchst nach einem neuen Tischnachbarn oder Teammitglied? Empfehle die offenen Stellen in deinem Unternehmen. Ganz einfach via Pull Request (aka Merge Request).</p>
+                  <a class="btn btn-dark btn-lg px-5 py-3" href="{{ '/recommend' | url }}">Jetzt empfehlen</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-xl-4 mt-5 bg-white ">
-            <div class="ps-lg-5">
-  <h1>Job- Empfehlungen von Entwicklern</h1>
-  <p class="lead">Auf mergerequest.dev findest du Job- Empfehlungen direkt von Entwicklern aus den Unternehmen die dich suchen. Du kannst Kontakt mit ihnen aufnehmen und die für dich wichtigsten Fragen klären. Ganz ohne HR und Headhunter blablabla.<br/> <b>Erstmal begrenzt auf die Region Hannover in Niedersachsen.</b></p>
-<hr/>
-<div class="bg-light p-5 mt-4">
-  <h2>Du willst selber ein Job empfehlen?</h2>
-  <p>Du bist Entwickler und suchst nach einem neuen Tischnachbarn oder Teammitglied? Empfehle die offenen Stellen in deinem Unternehmen. Ganz einfach via Pull Request (aka Merge Request).</p>
-    <a class="btn btn-dark btn-lg px-5 py-3" href="{{ '/recommend' | url }}">Jetzt empfehlen</a>
-  </div>
-</div>
-          </div>
-
+        </div>
       </div>
-      </div>
-    </div>
     </main>
 
     <footer class="container">
@@ -41,5 +39,4 @@
     </footer>
 
   </body>
-
 </html>
