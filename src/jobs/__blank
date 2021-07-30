@@ -1,9 +1,10 @@
 ---
-####################### About you #######################
-githubHandle: holger1411 #MANDATORY#
+
+
+####################### MANDATORY INFORMATIONS START #######################
+githubHandle: holger1411
 #Please add your GitHub username here. Make sure you have at least one contact possibility available. Could be your Twitter profile with open DM´s, a link to your personal website with a contact form or a working email adress published on your profile.
 
-####################### The Role #######################
 roleName: Java Developer #MANDATORY#
 #Describe the role in a few words. Like "Java Developer", "React Frontend Developer" or "UX Engineer"
 
@@ -13,6 +14,18 @@ roleType: Backend #MANDATORY#
 roleMustHaveTechStack: Java, Spring, Git #MANDATORY#
 #Comma seperated list. Add the must have tech stack. Things a applicant must know before starting to work for your team
 
+companyName: OCP GmbH #MANDATORY#
+#Add your company name
+
+roleLocation: fully remote
+#Add where the applicant will work. Can be a city or town if it is a "in-office" role, could also be "remote but Europe", or "fully remote" or "three days per week WFH, two days in-office" etc.
+####################### MANDATORY INFORMATIONS END #######################
+
+
+
+####################### OPTIONAL INFORMATIONS START #######################
+
+### Additional Role Informations ###
 roleUrl: https://api.chucknorris.io/
 #Is there a public job posting on your company website or another job portal like indeed or glassdoor? Add the URL here to spice up your recommendation with some "official" informations.
 
@@ -31,13 +44,9 @@ roleHardware: PC or Mac, Monitor of choice
 roleExperience: 2yrs minimum
 #Add the needed experience in some way. Can be something like "Senior", or "more than 5yrs" etc.
 
-roleLocation: fully remote
-#Add where the applicant will work. Can be a city or town if it is a "in-office" role, could also be "remote but Europe", or "fully remote" or "three days per week WFH, two days in-office" etc.
 
-####################### Company and Team Informations #######################
-companyName: OCP GmbH #MANDATORY#
-#Add your company name
 
+### Company and Team Informations ###
 companySize: 100-500
 #Add the number of people working for your company
 
@@ -53,15 +62,27 @@ companyTeamStructure: Spotify Squad model
 companyWebsite: https://cyberdynesystems.com
 #Add your company´s website URL
 
-####################### Benefits #######################
+
+
+### Benefits ###
 benefits:
   - Free lunch
   - Free beer on fridays
 #Add an array of benefits you and/or your team have
 
-####################### Optionals #######################
+
+
+### Salary ###
 salaryRange: 50k - 70k
 #Add some salary information. Can be something like "from 50-70k", "above average" or you can keep it empty. In this case no salary infomrations will be published
+
+salaryBenefits:
+  - Stock options
+  - Yearly bonus
+#Add an array of additional monetary boni if available
+####################### OPTIONAL INFORMATIONS END #######################
+
+
 
 ####################### DON´T EDIT! #######################
 date: Created
